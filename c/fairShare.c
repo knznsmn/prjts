@@ -18,8 +18,20 @@ int main() {
     scanf("%d", &qty);
     printf("\nSo there are %d %ss.\n", qty, item);
     printf("\nLet's divide it between the two of us.\n");
+   
     printf("Enter how many should be yours: ");
     scanf("%d", &user);
+
+    /* If user wants more than what's available */ 
+    if (user >= qty) {
+        do {
+            printf("Please be fair.\n");
+            printf("Enter how many should be yours: ");
+            scanf("%d", &user);
+        }
+        while (user >= qty);
+    }
+
     printf("\n%d, nice. That's cool.\n", user);
 
     int mine = qty - user;
