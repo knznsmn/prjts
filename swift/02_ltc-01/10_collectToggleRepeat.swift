@@ -1,0 +1,23 @@
+func collectToggle() {
+    moveForward()
+    turnLeft()
+    moveForward()
+    turnRight()
+    moveForward()
+    turnRight()
+    moveForward()
+    turnRight()
+    moveForward()
+    turnLeft()
+    moveForward()
+    toggleSwitch()
+}
+
+collectToggle()
+turnLeft()
+collectToggle()
+moveForward()
+turnLeft()
+collectToggle()
+turnLeft()
+collectToggle()
