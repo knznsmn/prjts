@@ -1,8 +1,11 @@
 '''  Counts the sum of n odd or even numbers
 '''
 
-def countOdd(n):
-    m = 1           # current number
+def count(p, n):
+    if p == 'odd' or p == 'yes':
+        m = 1           # current number
+    else:
+        m = 2
     i = 1
     sum = m 
 
@@ -12,17 +15,13 @@ def countOdd(n):
         i += 1      # increment counter
     print(sum)
 
-def countEven(n):
-    m = 2
-    i = 1
-    sum = m
+def adder(p, n):
+    if p == 'y':
+        n *= n
+    else:
+        n += n * n
+    print(n)
 
-    while i < n:
-        m += 2
-        sum += m
-        i += 1
-    print(sum)
-
+isOdd= input("Do you want the sum of odd numbers? ")
 peak = int(input("What's the peak number to add? "))
-countOdd(peak)
-countEven(peak)
+adder(isOdd, peak)
